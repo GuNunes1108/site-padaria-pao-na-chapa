@@ -29,7 +29,7 @@ header {
 
 #introducao {
     display: flex;
-    height: 250px;
+    min-height: 250px;
     align-items: center;
 }
 
@@ -45,7 +45,7 @@ header {
     padding-left: 100px;
     padding-right: 100px;
     background-color: rgb(54, 31, 5);
-    height: 200px;
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     color: rgb(255, 255, 255);
@@ -53,8 +53,8 @@ header {
 }
 
 #produtos{
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 0;
+    padding-right: 0;
 }
 #produtos h2{
     margin-top: 100px;
@@ -70,7 +70,6 @@ header {
 }
 
 .produto{
-    width: 200px;
     text-align: center;
 }
 
@@ -89,4 +88,40 @@ footer p{
 .direitos-autorais{
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+@media(max-width: 875px){
+    #introducao{
+        flex-direction: column;
+        text-align: center;
+    }
+    .conteudo-produtos{
+        flex-direction: column;
+    }
+    header{
+        padding-left: 0;
+        padding-right: 0;
+        flex-direction: column;
+    }
+    .logo-header{
+        width: 300px;
+    }
+    #introducao div {
+        padding-left: 0;
+        padding-right: 0;
+        width: 80%;
+    }
+    .conteudo-produtos{
+        flex-direction: column;
+    }
+    .menu ul{
+        padding-left: 0;
+        margin: auto;
+    }
+    .produto{
+        width: 80%;
+    }
+    #sobre-nos{
+        text-align: center;
+    }
 }
